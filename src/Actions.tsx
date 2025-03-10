@@ -2,10 +2,9 @@ import React from 'react';
 
 interface ActionsProps {
     canvasRef: React.RefObject<HTMLCanvasElement | null>;
-    finalUrl: string;
 }
 
-const Actions: React.FC<ActionsProps> = ({ canvasRef, finalUrl }) => {
+const Actions: React.FC<ActionsProps> = ({ canvasRef}) => {
     const copyToClipboard = async () => {
         if (!canvasRef.current) return;
         canvasRef.current.toBlob(async (blob) => {

@@ -60,7 +60,7 @@ function App() {
         <Header />
         <InputField url={url} setUrl={setUrl} generateQRCode={generateQRCode} loading={loading} finalized={finalized} />
         {qrGenerated && <QRCodeDisplay qrRef={qrRef} finalUrl={finalUrl} height={height} blur={blur} />}
-        {finalized && <Actions canvasRef={canvasRef} finalUrl={finalUrl} />}
+        {finalized && <Actions canvasRef={canvasRef} />}
         {!loading && !qrGenerated && (
           <img src="/frame.png" alt="Frame Image" className="mt-5 w-full max-w-[500px]" />
         )}
