@@ -18,7 +18,7 @@ const InputField: React.FC<InputFieldProps> = ({ url, setUrl, generateQRCode, lo
         setButtonText("Generate QR Code");
       }, 3000);
 
-      return () => clearTimeout(timer); // Cleanup timeout when component unmounts
+      return () => clearTimeout(timer); 
     }
   }, [finalized]);
 
