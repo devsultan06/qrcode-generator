@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import InputField from "./InputField";
-import QRCodeDisplay from "./QrCodeDisplay";
+import QRCodeDisplay from "./QRCodeDisplay";
 import Actions from "./Actions";
 import Footer from "./Footer";
 
