@@ -36,10 +36,10 @@ const Actions: React.FC<ActionsProps> = ({ canvasRef }) => {
             <p className='block'>Click to copy or download</p>
             <div className='flex justify-center items-center gap-4 mt-4'>
                 <div className='cursor-pointer button p-2 rounded-[10px]' onClick={copyToClipboard}>
-                    <img src="/public/copy.png" alt="" />
+                    <img src="/copy.png" alt="" />
                 </div>
                 <div className='cursor-pointer button p-2 rounded-[10px]' onClick={downloadQRCode}>
-                    <img src="/public/download.png" alt="" />
+                    <img src="/download.png" alt="" />
                 </div>
             </div>
         </div>
