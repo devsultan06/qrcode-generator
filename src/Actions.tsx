@@ -4,7 +4,7 @@ interface ActionsProps {
     canvasRef: React.RefObject<HTMLCanvasElement | null>;
 }
 
-const Actions: React.FC<ActionsProps> = ({ canvasRef}) => {
+const Actions: React.FC<ActionsProps> = ({ canvasRef }) => {
     const copyToClipboard = async () => {
         if (!canvasRef.current) return;
         canvasRef.current.toBlob(async (blob) => {
@@ -32,9 +32,16 @@ const Actions: React.FC<ActionsProps> = ({ canvasRef}) => {
     };
 
     return (
-        <div className="mt-4 flex gap-4">
-            <button onClick={copyToClipboard} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Copy QR Code</button>
-            <button onClick={downloadQRCode} className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">Download</button>
+        <div className="mt-4 ">
+            <p className='block'>Click to copy or download</p>
+            <div className='flex justify-center items-center gap-4 mt-4'>
+                <div className='cursor-pointer button p-2 rounded-[10px]' onClick={copyToClipboard}>
+                    <img src="/public/copy.png" alt="" />
+                </div>
+                <div className='cursor-pointer button p-2 rounded-[10px]' onClick={downloadQRCode}>
+                    <img src="/public/download.png" alt="" />
+                </div>
+            </div>
         </div>
     );
 };
